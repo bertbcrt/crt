@@ -55,3 +55,12 @@
       "sa-east-1"      : {"64" : "ami-0039e61d"}
     }
   },
+  Resources : {
+
+  }
+  "VPC" : {
+        "Type" : "AWS::EC2::VPC",
+        "Properties" : {
+          "CidrBlock" : "10.0.0.0/16"
+        }
+      },
