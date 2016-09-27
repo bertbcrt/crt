@@ -239,3 +239,34 @@
                                       "PortRange" : {"From" : "1", "To" : "65535"}
                                     }
                                   },
+                                  "PublicSubnetAclAssociation1" : {
+                                        "Type" : "AWS::EC2::SubnetNetworkAclAssociation",
+                                        "Properties" : {
+                                          "SubnetId" : { "Ref" : "PublicSubnet1" },
+                                          "NetworkAclId" : {"Ref" : "PublicSubnetAcl"}
+                                        }
+                                      },
+
+                                      "PublicSubnetAclAssociation2" : {
+                                        "Type" : "AWS::EC2::SubnetNetworkAclAssociation",
+                                        "Properties" : {
+                                          "SubnetId" : { "Ref" : "PublicSubnet2" },
+                                          "NetworkAclId" : {"Ref" : "PublicSubnetAcl"}
+                                        }
+                                      },
+
+                                      "PrivateSubnetAclAssociation1" : {
+                                        "Type" : "AWS::EC2::SubnetNetworkAclAssociation",
+                                        "Properties" : {
+                                          "SubnetId" : { "Ref" : "PrivateSubnet1" },
+                                          "NetworkAclId" : {"Ref" : "PrivateSubnetAcl"}
+                                        }
+                                      },
+
+                                      "PrivateSubnetAclAssociation2" : {
+                                        "Type" : "AWS::EC2::SubnetNetworkAclAssociation",
+                                        "Properties" : {
+                                          "SubnetId" : { "Ref" : "PrivateSubnet2" },
+                                          "NetworkAclId" : {"Ref" : "PrivateSubnetAcl"}
+                                        }
+                                      },
