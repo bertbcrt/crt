@@ -30,3 +30,28 @@
 }
 
 },
+"Mappings" : {
+    "AWSInstanceType2Arch" : {
+      "m1.small"   : { "Arch" : "64" },
+      "m1.medium"  : { "Arch" : "64" },
+      "m1.large"   : { "Arch" : "64" },
+      "m1.xlarge"  : { "Arch" : "64" },
+      "m2.xlarge"  : { "Arch" : "64" },
+      "m2.2xlarge" : { "Arch" : "64" },
+      "m2.4xlarge" : { "Arch" : "64" },
+      "m3.xlarge"  : { "Arch" : "64" },
+      "m3.2xlarge" : { "Arch" : "64" },
+      "c1.medium"  : { "Arch" : "64" },
+      "c1.xlarge"  : { "Arch" : "64" }
+    },
+    "AWSRegionArch2AMI" : {
+      "us-east-1"      : {"64" : "ami-f619c29f"},
+      "us-west-2"      : {"64" : "ami-52ff7262"},
+      "us-west-1"      : {"64" : "ami-3bcc9e7e"},
+      "eu-west-1"      : {"64" : "ami-e5e2d991"},
+      "ap-southeast-1" : {"64" : "ami-02eb9350"},
+      "ap-southeast-2" : {"64" : "ami-ab990e91"},
+      "ap-northeast-1" : {"64" : "ami-14d86d15"},
+      "sa-east-1"      : {"64" : "ami-0039e61d"}
+    }
+  },
