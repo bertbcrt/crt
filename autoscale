@@ -1,0 +1,1 @@
+aws autoscaling create-auto-scaling-group --auto-scaling-group-name lab-as-group --availability-zones us-west-2b --launch-configuration-name lab-lc --load-balancer-names qlstack2-ElasticL-MVO21P48O2CR --max-size 5 --min-size 1
