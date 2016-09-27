@@ -64,3 +64,16 @@
           "CidrBlock" : "10.0.0.0/16"
         }
       },
+      "InternetGateway" : {
+            "Type" : "AWS::EC2::InternetGateway",
+            "Properties" : {
+            }
+          },
+
+          "AttachGateway" : {
+             "Type" : "AWS::EC2::VPCGatewayAttachment",
+             "Properties" : {
+               "VpcId" : { "Ref" : "VPC" },
+               "InternetGatewayId" : { "Ref" : "InternetGateway" }
+             }
+          },
