@@ -270,3 +270,19 @@
                                           "NetworkAclId" : {"Ref" : "PrivateSubnetAcl"}
                                         }
                                       },
+                                      "NAT" : {
+                                            "Type" : "AWS::EC2::Instance",
+                                            "Properties" : {
+                                              "InstanceType" : { "Ref" : "NATInstanceType" },
+                                              "ImageId" : { "Fn::FindInMap" : [ "AWSRegionArch2AMI", { "Ref" : "AWS::Region" },
+                                                            { "Fn::FindInMap" : [ "AWSInstanceType2Arch", { "Ref" : "NATInstanceType" }, "Arch" ] } ] },
+                                              "SubnetId" : { "Ref" : "PublicSubnet1" },
+                                              "SourceDestCheck" : "false",
+                                              "DisableApiTermination" : "true",
+                                              "SecurityGroupIds" : [ { "Ref" : "NATSecurityGroup" } ],
+                                              "Tags" : [
+                                                { "Key" : "Name", "Value" : { "Fn::Join" : ["", [
+                                                    "NAT-", { "Ref" : "VPC"} ]] } }
+                                              ]
+                                            }
+                                          },
