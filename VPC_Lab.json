@@ -172,3 +172,15 @@
                               "RouteTableId" : { "Ref" : "PrivateRouteTable" }
                             }
                           },
+                          "PublicSubnetAcl" : {
+                                "Type" : "AWS::EC2::NetworkAcl",
+                                "Properties" : {
+                                  "VpcId" : {"Ref" : "VPC"}
+                                }
+                              },
+                              "PrivateSubnetAcl" : {
+                                "Type" : "AWS::EC2::NetworkAcl",
+                                "Properties" : {
+                                  "VpcId" : {"Ref" : "VPC"}
+                                }
+                              },
