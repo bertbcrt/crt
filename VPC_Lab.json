@@ -142,3 +142,33 @@
                           "InstanceId" : { "Ref" : "NAT" }
                         }
                       },
+                      "PublicSubnetRouteTableAssociation1" : {
+                            "Type" : "AWS::EC2::SubnetRouteTableAssociation",
+                            "Properties" : {
+                              "SubnetId" : { "Ref" : "PublicSubnet1" },
+                              "RouteTableId" : { "Ref" : "PublicRouteTable" }
+                            }
+                          },
+
+                          "PublicSubnetRouteTableAssociation2" : {
+                            "Type" : "AWS::EC2::SubnetRouteTableAssociation",
+                            "Properties" : {
+                              "SubnetId" : { "Ref" : "PublicSubnet2" },
+                              "RouteTableId" : { "Ref" : "PublicRouteTable" }
+                            }
+                          },
+
+                          "PrivateSubnetRouteTableAssociation1" : {
+                            "Type" : "AWS::EC2::SubnetRouteTableAssociation",
+                            "Properties" : {
+                              "SubnetId" : { "Ref" : "PrivateSubnet1" },
+                              "RouteTableId" : { "Ref" : "PrivateRouteTable" }
+                            }
+                          },
+                          "PrivateSubnetRouteTableAssociation2" : {
+                            "Type" : "AWS::EC2::SubnetRouteTableAssociation",
+                            "Properties" : {
+                              "SubnetId" : { "Ref" : "PrivateSubnet2" },
+                              "RouteTableId" : { "Ref" : "PrivateRouteTable" }
+                            }
+                          },
