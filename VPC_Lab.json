@@ -293,3 +293,14 @@
                                                   "InstanceId" : { "Ref" : "NAT" }
                                                 }
                                               },
+                                              "NATSecurityGroup" : {
+                                                    "Type" : "AWS::EC2::SecurityGroup",
+                                                    "Properties" : {
+                                                      "GroupDescription" : "NAT Security Group",
+                                                      "VpcId" : {"Ref" : "VPC"},
+                                                      "SecurityGroupIngress" : [
+                                                        { "IpProtocol" : "-1", "FromPort" : "1", "ToPort" : "65535", "SourceSecurityGroupId" : { "Ref" : "PrivateSG" } },
+                                                        { "IpProtocol" : "icmp", "FromPort" : "-1", "ToPort" : "-1", "SourceSecurityGroupId" : { "Ref" : "PrivateSG" } }
+                                                      ]
+                                                    }
+                                                  },
